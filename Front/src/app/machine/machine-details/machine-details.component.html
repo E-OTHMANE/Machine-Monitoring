@@ -1,0 +1,43 @@
+<div class="card w-50 mx-auto my-auto">
+    <div class="card-header">
+        <h2>Machine details : </h2>
+    </div>
+    <div *ngIf="errHandler">
+        <div class="text-center">
+            <h5>{{errHandler}}</h5>
+        </div>
+    </div>
+    <div *ngIf="!errHandler">
+        <div class="card-body">
+            <h5>
+                <div class="row">
+                    <div class="col-5">
+                        Name :
+                    </div>
+                    <div class="col">
+                        {{selectedMachine?.name}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        Description :
+                    </div>
+                    <div class="col">
+                        {{selectedMachine?.description}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        Total Prodcution :
+                    </div>
+                    <div class="col">
+                        {{totalProdcution}}
+                    </div>
+                </div>
+            </h5>
+            <footer class="text-center">
+                <a [routerLink]="['/']" class="btn btn-primary">Go Back</a>
+            </footer>
+        </div>
+    </div>
+</div>
